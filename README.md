@@ -1,4 +1,6 @@
 # tutorial-network
+
+Based on: https://hyperledger.github.io/composer/latest/tutorials/developer-tutorial.html
 ### Create Archive
     composer archive create -t dir -n .
     
