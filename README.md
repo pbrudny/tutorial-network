@@ -1,7 +1,14 @@
 # tutorial-network
 
 Based on: https://hyperledger.github.io/composer/latest/tutorials/developer-tutorial.html
+
+### Start Fabric 
+    cd fabric-dev-servers
+    ./startFabric.sh
+
 ### Create Archive
+Go back to `tutorial-network`
+
     composer archive create -t dir -n .
     
 ### Install 
@@ -10,7 +17,7 @@ Based on: https://hyperledger.github.io/composer/latest/tutorials/developer-tuto
 ### Start
 
     composer network start --networkName tutorial-network --networkVersion 0.0.1 --networkAdmin admin --networkAdminEnrollSecret adminpw --card PeerAdmin@hlfv1 --file networkadmin.card
-
+Make sure you use the right network version
 ### Check
     composer network ping --card admin@tutorial-network
 
