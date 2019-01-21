@@ -3,8 +3,10 @@
 Based on: https://hyperledger.github.io/composer/latest/tutorials/developer-tutorial.html
 
 ### Start Fabric 
-    cd fabric-dev-servers
-    ./startFabric.sh
+        cd fabric-dev-servers
+        export FABRIC_VERSION=hlfv12
+        ./startFabric.sh
+        ./createPeerAdminCard.sh
 
 ### Create Archive
 Go back to `tutorial-network`
@@ -14,6 +16,9 @@ Go back to `tutorial-network`
 ### Install 
 
     composer network install --card PeerAdmin@hlfv1 --archiveFile tutorial-network@0.0.1.bna
+    
+### Import Card
+    composer card import --file networkadmin.card    
 ### Start
 
     composer network start --networkName tutorial-network --networkVersion 0.0.1 --networkAdmin admin --networkAdminEnrollSecret adminpw --card PeerAdmin@hlfv1 --file networkadmin.card
