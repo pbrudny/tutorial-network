@@ -1,7 +1,7 @@
 env:
     node: true
     mocha: true
-extends: 'eslint:recommended'
+extends: 'eslint-config-es5'
 parserOptions:
     ecmaVersion: 8
     sourceType:

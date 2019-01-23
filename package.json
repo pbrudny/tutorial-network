@@ -7,9 +7,8 @@
   "description": "something",
   "scripts": {
     "prepublish": "mkdirp ./dist && composer archive create --sourceType dir --sourceName . -a ./dist/tutorial-network.bna",
-    "pretest": "npm run lint",
     "lint": "eslint .",
-    "test": "nyc mocha -t 0 test/*.js && cucumber-js"
+    "test": "cucumber-js"
   },
   "keywords": [
     "composer",
@@ -19,18 +18,19 @@
   "email": "pbrudny@gmail.com",
   "license": "Apache-2.0",
   "devDependencies": {
+    "chai": "latest",
+    "chai-as-promised": "latest",
     "composer-admin": "^0.20.6",
     "composer-cli": "^0.20.6",
     "composer-client": "^0.20.6",
     "composer-common": "^0.20.6",
     "composer-connector-embedded": "^0.20.6",
     "composer-cucumber-steps": "^0.20.6",
-    "chai": "latest",
-    "chai-as-promised": "latest",
     "cucumber": "^2.2.0",
     "eslint": "latest",
-    "nyc": "latest",
+    "eslint-config-es5": "^0.5.0",
     "mkdirp": "latest",
-    "mocha": "latest"
+    "mocha": "latest",
+    "nyc": "latest"
   }
 }
